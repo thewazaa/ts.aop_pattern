@@ -46,7 +46,7 @@ class Whatever extends aop_pattern.Aop<loggerWorker> {
 
 ### External modules
 
-* ["index"](dpcs/modules/_index_.md)
+* ["index"](docs/modules/_index_.md)
 * ["src/Aop"](docs/modules/_src_aop_.md)
 * ["src/AopWorker"](docs/modules/_src_aopworker_.md)
 

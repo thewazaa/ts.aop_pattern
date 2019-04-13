@@ -1,6 +1,6 @@
 {
   "name": "aop_pattern",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Aspect Oriented Programing pattern to be used in typescript",
   "main": "index.ts",
   "scripts": {
