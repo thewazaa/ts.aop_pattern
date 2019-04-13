@@ -1,4 +1,6 @@
 export abstract class AopWorker {
+  public _extra?: any;
+
   /**
    * It controls the code region defined through the [Interceptor], to let you
    * define what to do at the start, at the end, at in case of Exception in that

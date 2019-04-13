@@ -55,13 +55,15 @@ export class Aop<T extends AopWorker> {
    * @param  methodName method name
    * @param  _arguments method arguments
    * @param  promise    promise method is retrieving
+   * @param  extra      extra auxiliar parameters
    * @return            promise replied, with work performed
    */
-  public async _intereceptPromise(methodName: string, _arguments: any, promise: Promise<any>): Promise<any> {
+  public async _intereceptPromise(methodName: string, _arguments: any, promise: Promise<any>, extra?: any): Promise<any> {
     var aux: T = new this.type();
     var ret: Promise<any> | undefined;
     var path = this.className != undefined? this.className + "." + methodName : methodName;
     try {
+      aux._extra = extra;
       aux.start(path, _arguments);
       ret = await promise;
       return ret;
@@ -77,13 +79,15 @@ export class Aop<T extends AopWorker> {
    * @param  methodName method name
    * @param  _arguments method arguments
    * @param  method     method code. It seems it has not arguments, but it takes the parent ones
+   * @param  extra      extra auxiliar parameters
    * @return            the expected value
    */
-  public _intereceptMethod(methodName: string, _arguments: any, method: () => {}): any {
+  public _intereceptMethod(methodName: string, _arguments: any, method: () => {}, extra?: any): any {
     var aux: T = new this.type();
     var ret: any = undefined;
     var path = this.className != undefined? this.className + "." + methodName : methodName;
     try {
+      aux._extra = extra;
       aux.start(path, _arguments);
       ret = method();
       return ret;

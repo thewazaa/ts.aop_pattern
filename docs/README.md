@@ -1,16 +1,18 @@
 
-
-## Index
+Index
+-----
 
 ### Version changes
 
+*   1.1.0 Extra parameters for external management
 *   1.0.1 Small changes on package.json providing much detailed information
 *   1.0.0 Initial release
 
 ### Example
 
-*__example__*:
- ```typescript
+_**example**_:
+
+```typescript
 
 class loggerWorker extends aop_pattern.AopWorker {
     public start(methodName: string, _arguments: any): void {
@@ -46,8 +48,19 @@ class Whatever extends aop_pattern.Aop<loggerWorker> {
 
 ### External modules
 
+*   ["index"](docs/modules/_index_.md)
+*   ["src/Aop"](docs/modules/_src_aop_.md)
+*   ["src/AopWorker"](docs/modules/_src_aopworker_.md)
+
+* * *
+
+## Index
+
+### External modules
+
 * ["index"](modules/_index_.md)
 * ["src/Aop"](modules/_src_aop_.md)
 * ["src/AopWorker"](modules/_src_aopworker_.md)
 
 ---
+

@@ -34,7 +34,7 @@
 
 ⊕ **new Aop**(type: *`object`*, className?: *`undefined` \| `string`*): [Aop](_src_aop_.aop.md)
 
-*Defined in [src/Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/Aop.ts#L5)*
+*Defined in [src/Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L5)*
 
 Class to intercept code regions related to class method, functions or promises.
 
@@ -86,7 +86,7 @@ ___
 
 **● className**: *`undefined` \| `string`*
 
-*Defined in [src/Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/Aop.ts#L5)*
+*Defined in [src/Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L5)*
 
 ___
 <a id="type"></a>
@@ -95,7 +95,7 @@ ___
 
 **● type**: *`object`*
 
-*Defined in [src/Aop.ts:4](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/Aop.ts#L4)*
+*Defined in [src/Aop.ts:4](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L4)*
 
 #### Type declaration
 
@@ -107,9 +107,9 @@ ___
 
 ###  _intereceptMethod
 
-▸ **_intereceptMethod**(methodName: *`string`*, _arguments: *`any`*, method: *`function`*): `any`
+▸ **_intereceptMethod**(methodName: *`string`*, _arguments: *`any`*, method: *`function`*, extra?: *`any`*): `any`
 
-*Defined in [src/Aop.ts:82](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/Aop.ts#L82)*
+*Defined in [src/Aop.ts:85](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L85)*
 
 Intercept a class method who retrieves a value (not void)
 
@@ -120,6 +120,7 @@ Intercept a class method who retrieves a value (not void)
 | methodName | `string` |  method name |
 | _arguments | `any` |  method arguments |
 | method | `function` |  method code. It seems it has not arguments, but it takes the parent ones |
+| `Optional` extra | `any` |  extra auxiliar parameters |
 
 **Returns:** `any`
 the expected value
@@ -129,9 +130,9 @@ ___
 
 ###  _intereceptPromise
 
-▸ **_intereceptPromise**(methodName: *`string`*, _arguments: *`any`*, promise: *`Promise`<`any`>*): `Promise`<`any`>
+▸ **_intereceptPromise**(methodName: *`string`*, _arguments: *`any`*, promise: *`Promise`<`any`>*, extra?: *`any`*): `Promise`<`any`>
 
-*Defined in [src/Aop.ts:60](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/Aop.ts#L60)*
+*Defined in [src/Aop.ts:61](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L61)*
 
 Intercept a promise who retrieves a promise
 
@@ -142,6 +143,7 @@ Intercept a promise who retrieves a promise
 | methodName | `string` |  method name |
 | _arguments | `any` |  method arguments |
 | promise | `Promise`<`any`> |  promise method is retrieving |
+| `Optional` extra | `any` |  extra auxiliar parameters |
 
 **Returns:** `Promise`<`any`>
 promise replied, with work performed

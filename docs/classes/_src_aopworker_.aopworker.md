@@ -12,6 +12,10 @@
 
 * [constructor](_src_aopworker_.aopworker.md#constructor)
 
+### Properties
+
+* [_extra](_src_aopworker_.aopworker.md#_extra)
+
 ### Methods
 
 * [end](_src_aopworker_.aopworker.md#end)
@@ -28,7 +32,7 @@
 
 ⊕ **new AopWorker**(): [AopWorker](_src_aopworker_.aopworker.md)
 
-*Defined in [src/AopWorker.ts:1](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L1)*
+*Defined in [src/AopWorker.ts:2](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/AopWorker.ts#L2)*
 
 It controls the code region defined through the \[Interceptor\], to let you define what to do at the start, at the end, at in case of Exception in that region
 
@@ -52,6 +56,18 @@ class loggerWorker extends aop_pattern.AopWorker {
 
 ___
 
+## Properties
+
+<a id="_extra"></a>
+
+### `<Optional>` _extra
+
+**● _extra**: *`any`*
+
+*Defined in [src/AopWorker.ts:2](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/AopWorker.ts#L2)*
+
+___
+
 ## Methods
 
 <a id="end"></a>
@@ -60,7 +76,7 @@ ___
 
 ▸ **end**(methodName: *`string`*, _arguments: *`any`*, ret?: *`any`*): `void`
 
-*Defined in [src/AopWorker.ts:45](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L45)*
+*Defined in [src/AopWorker.ts:47](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/AopWorker.ts#L47)*
 
 It runs at the end the method. Even when an exception is being performed
 
@@ -81,7 +97,7 @@ ___
 
 ▸ **exception**(methodName: *`string`*, _arguments: *`any`*, exception: *`string`*): `void`
 
-*Defined in [src/AopWorker.ts:37](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L37)*
+*Defined in [src/AopWorker.ts:39](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/AopWorker.ts#L39)*
 
 It runs in case of exception.
 
@@ -102,7 +118,7 @@ ___
 
 ▸ **start**(methodName: *`string`*, _arguments: *`any`*): `void`
 
-*Defined in [src/AopWorker.ts:29](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L29)*
+*Defined in [src/AopWorker.ts:31](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/AopWorker.ts#L31)*
 
 It runs at the start of the region
 
@@ -116,3 +132,4 @@ It runs at the start of the region
 **Returns:** `void`
 
 ___
+
