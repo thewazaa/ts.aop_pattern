@@ -17,7 +17,7 @@ export abstract class AopWorker {
    *    public end(methodName: string, _arguments: any, ret?: any): void {
    *      console.debug('end', methodName, _arguments, ret);
    *    }
-   *  }
+   * }
    * ```
    */
   constructor() { }

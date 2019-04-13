@@ -28,7 +28,7 @@
 
 ⊕ **new AopWorker**(): [AopWorker](_src_aopworker_.aopworker.md)
 
-*Defined in src/AopWorker.ts:1*
+*Defined in [src/AopWorker.ts:1](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L1)*
 
 It controls the code region defined through the \[Interceptor\], to let you define what to do at the start, at the end, at in case of Exception in that region
 
@@ -45,7 +45,7 @@ class loggerWorker extends aop_pattern.AopWorker {
    public end(methodName: string, _arguments: any, ret?: any): void {
      console.debug('end', methodName, _arguments, ret);
    }
- }
+}
 ```
 
 **Returns:** [AopWorker](_src_aopworker_.aopworker.md)
@@ -60,7 +60,7 @@ ___
 
 ▸ **end**(methodName: *`string`*, _arguments: *`any`*, ret?: *`any`*): `void`
 
-*Defined in src/AopWorker.ts:45*
+*Defined in [src/AopWorker.ts:45](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L45)*
 
 It runs at the end the method. Even when an exception is being performed
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **exception**(methodName: *`string`*, _arguments: *`any`*, exception: *`string`*): `void`
 
-*Defined in src/AopWorker.ts:37*
+*Defined in [src/AopWorker.ts:37](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L37)*
 
 It runs in case of exception.
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **start**(methodName: *`string`*, _arguments: *`any`*): `void`
 
-*Defined in src/AopWorker.ts:29*
+*Defined in [src/AopWorker.ts:29](https://github.com/thewazaa/ts.aop_pattern/blob/f378da4/src/AopWorker.ts#L29)*
 
 It runs at the start of the region
 
@@ -116,4 +116,3 @@ It runs at the start of the region
 **Returns:** `void`
 
 ___
-

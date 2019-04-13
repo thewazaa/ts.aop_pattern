@@ -2,6 +2,10 @@
 
 # Module: aop_pattern
 
+Auxiliar classes to be able to perform a basic AOP contorl of your code. ([https://en.wikipedia.org/wiki/Aspect-oriented\_programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming))
+
+*   1.0.0 Initial release
+
 ## Index
 
 ---
