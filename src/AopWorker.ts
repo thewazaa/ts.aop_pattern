@@ -9,7 +9,7 @@ export abstract class AopWorker {
    * @example
    * ```typescript
    *
-   * class loggerWorker extends aop_pattern.AopWorker {
+   * class loggerWorker extends AopWorker {
    *    public start(methodName: string, _arguments: any): void {
    *      console.debug('start', methodName, _arguments);
    *    }

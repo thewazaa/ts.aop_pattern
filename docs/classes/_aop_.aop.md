@@ -1,9 +1,9 @@
-[aop_pattern](../README.md) > ["src/Aop"](../modules/_src_aop_.md) > [Aop](../classes/_src_aop_.aop.md)
+[aop_pattern](../README.md) > ["Aop"](../modules/_aop_.md) > [Aop](../classes/_aop_.aop.md)
 
 # Class: Aop
 
 ## Type parameters
-#### T :  [AopWorker](_src_aopworker_.aopworker.md)
+#### T :  [AopWorker](_aopworker_.aopworker.md)
 ## Hierarchy
 
 **Aop**
@@ -12,17 +12,17 @@
 
 ### Constructors
 
-* [constructor](_src_aop_.aop.md#constructor)
+* [constructor](_aop_.aop.md#constructor)
 
 ### Properties
 
-* [className](_src_aop_.aop.md#classname)
-* [type](_src_aop_.aop.md#type)
+* [className](_aop_.aop.md#classname)
+* [type](_aop_.aop.md#type)
 
 ### Methods
 
-* [_intereceptMethod](_src_aop_.aop.md#_intereceptmethod)
-* [_intereceptPromise](_src_aop_.aop.md#_intereceptpromise)
+* [_intereceptMethod](_aop_.aop.md#_intereceptmethod)
+* [_intereceptPromise](_aop_.aop.md#_intereceptpromise)
 
 ---
 
@@ -32,9 +32,9 @@
 
 ###  constructor
 
-⊕ **new Aop**(type: *`object`*, className?: *`undefined` \| `string`*): [Aop](_src_aop_.aop.md)
+⊕ **new Aop**(type: *`object`*, className?: *`undefined` \| `string`*): [Aop](_aop_.aop.md)
 
-*Defined in [src/Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L5)*
+*Defined in [Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L5)*
 
 Class to intercept code regions related to class method, functions or promises.
 
@@ -45,9 +45,9 @@ The interceptor doesn't rewrite your code. It uses the base structure of typescr
 *__example__*:
  ```typescript
 
-class loggerWorker extends aop_pattern.AopWorker { ... }
+class loggerWorker extends AopWorker { ... }
 
-class Whatever extends aop_pattern.Aop<loggerWorker> {
+class Whatever extends Aop<loggerWorker> {
    constructor(...) {
      Super(loggerWorker, Whatever.name);
      ...
@@ -74,7 +74,7 @@ class Whatever extends aop_pattern.Aop<loggerWorker> {
 | type | `object` |  Interceptor worker to define the operations - at the start, at the end, and on exception of the regions you decide to control. |
 | `Optional` className | `undefined` \| `string` |  In case you use it as an extension, it would help you to see the correct namespace path in the worker helper Methods |
 
-**Returns:** [Aop](_src_aop_.aop.md)
+**Returns:** [Aop](_aop_.aop.md)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 **● className**: *`undefined` \| `string`*
 
-*Defined in [src/Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L5)*
+*Defined in [Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L5)*
 
 ___
 <a id="type"></a>
@@ -95,7 +95,7 @@ ___
 
 **● type**: *`object`*
 
-*Defined in [src/Aop.ts:4](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L4)*
+*Defined in [Aop.ts:4](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L4)*
 
 #### Type declaration
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **_intereceptMethod**(methodName: *`string`*, _arguments: *`any`*, method: *`function`*, extra?: *`any`*): `any`
 
-*Defined in [src/Aop.ts:85](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L85)*
+*Defined in [Aop.ts:85](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L85)*
 
 Intercept a class method who retrieves a value (not void)
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **_intereceptPromise**(methodName: *`string`*, _arguments: *`any`*, promise: *`Promise`<`any`>*, extra?: *`any`*): `Promise`<`any`>
 
-*Defined in [src/Aop.ts:61](https://github.com/thewazaa/ts.aop_pattern/blob/c02f2ad/src/Aop.ts#L61)*
+*Defined in [Aop.ts:61](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L61)*
 
 Intercept a promise who retrieves a promise
 
