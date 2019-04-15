@@ -4,6 +4,7 @@
 
 ### Version changes
 
+*   1.1.2 js builder
 *   1.1.0 Extra parameters for external management
 *   1.0.1 Small changes on package.json providing much detailed information
 *   1.0.0 Initial release

@@ -1,27 +1,26 @@
+import * as aop_pattern from '../src/index';
+
 import { assert } from 'chai';
 
-import aop_pattern from '../index';
 import { testWorker, _start, _end, _exception } from './AopWorker';
 
 class Test extends aop_pattern.Aop<testWorker> {
-  tmp: any;
-
   constructor() { super(testWorker, Test.name); }
 
   public testReturnValue(arg1: number, arg2: string): any {
-    return this._intereceptMethod(this.testReturnValue.name, arguments, () => { return { arg1: arg1, arg2: arg2 }; });
+    return this._intereceptMethod(this.testReturnValue.name, {0: arg1, 1: arg2}, () => { return { arg1: arg1, arg2: arg2 }; });
   }
 
   public testReturnValueException(arg1: number, arg2: string): any {
-    return this._intereceptMethod(this.testReturnValueException.name, arguments, () => { throw 'exception ' + arg1 + arg2; });
+    return this._intereceptMethod(this.testReturnValueException.name, {0: arg1, 1: arg2}, () => { throw 'exception ' + arg1 + arg2; });
   }
 
   public async testReturnPromise(arg1: number, arg2: string): Promise<any> {
-    return this._intereceptPromise(this.testReturnPromise.name, arguments, new Promise((ret) => { ret({ arg1: arg1, arg2: arg2 }); }));
+    return this._intereceptPromise(this.testReturnPromise.name, {0: arg1, 1: arg2}, new Promise((ret) => { ret({ arg1: arg1, arg2: arg2 }); }));
   }
 
   public async testReturnPromiseException(arg1: number, arg2: string): Promise<any> {
-    return this._intereceptPromise(this.testReturnPromiseException.name, arguments, new Promise((ret) => { throw 'exception ' + arg1 + arg2; }));
+    return this._intereceptPromise(this.testReturnPromiseException.name, {0: arg1, 1: arg2}, new Promise(() => { throw 'exception ' + arg1 + arg2; }));
   }
 }
 

@@ -1,11 +1,16 @@
 {
   "name": "aop_pattern",
-  "version": "1.1.0",
+  "version": "1.1.5",
   "description": "Aspect Oriented Programing pattern to be used in typescript",
-  "main": "index.ts",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register test/*.ts",
-    "docs": "typedoc --theme markdown index.ts -out docs"
+    "docs": "typedoc --theme markdown index.ts -out docs",
+    "build": "tsc --pretty"
   },
   "repository": {
     "type": "git",

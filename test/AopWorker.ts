@@ -1,4 +1,4 @@
-import aop_pattern from '../index';
+import * as aop_pattern from '../src/index';
 
 var _start: any;
 var _exception: any;
