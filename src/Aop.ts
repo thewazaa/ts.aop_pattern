@@ -23,9 +23,9 @@ export class Aop<T extends AopWorker> {
    * @example
    * ```typescript
    *
-   * class loggerWorker extends aop_pattern.AopWorker { ... }
+   * class loggerWorker extends AopWorker { ... }
    *
-   * class Whatever extends aop_pattern.Aop<loggerWorker> {
+   * class Whatever extends Aop<loggerWorker> {
    *    constructor(...) {
    *      Super(loggerWorker, Whatever.name);
    *      ...

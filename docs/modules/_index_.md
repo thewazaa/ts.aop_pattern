@@ -4,9 +4,5 @@
 
 ## Index
 
-### Modules
-
-* [aop_pattern](_index_.aop_pattern.md)
-
 ---
 
