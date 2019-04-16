@@ -60,18 +60,20 @@ export class Aop<T extends AopWorker> {
    */
   public async _intereceptPromise(methodName: string, _arguments: any, promise: Promise<any>, extra?: any): Promise<any> {
     var aux: T = new this.type();
-    var ret: Promise<any> | undefined;
-    var path = this.className != undefined? this.className + "." + methodName : methodName;
-    try {
-      aux._extra = extra;
-      aux.start(path, _arguments);
-      ret = await promise;
-      return ret;
-    } catch (err) {
-      aux.exception(path, _arguments, err);
-    } finally {
-      aux.end(path, _arguments, ret);
-    }
+    var path = this.className != undefined ? this.className + "." + methodName : methodName;
+    aux._extra = extra;
+    aux.start(path, _arguments);
+    return new Promise<any>((resolve, reject) => {
+      promise.then((retVal: any) => {
+        aux.end(path, _arguments, retVal);
+        resolve(retVal);
+      })
+        .catch((err: any) => {
+          aux.exception(path, _arguments, err);
+          aux.end(path, _arguments);
+          reject(err);
+        });
+    });
   }
 
   /**
@@ -85,7 +87,7 @@ export class Aop<T extends AopWorker> {
   public _intereceptMethod(methodName: string, _arguments: any, method: () => {}, extra?: any): any {
     var aux: T = new this.type();
     var ret: any = undefined;
-    var path = this.className != undefined? this.className + "." + methodName : methodName;
+    var path = this.className != undefined ? this.className + "." + methodName : methodName;
     try {
       aux._extra = extra;
       aux.start(path, _arguments);

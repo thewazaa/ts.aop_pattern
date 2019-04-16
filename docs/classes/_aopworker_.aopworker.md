@@ -32,7 +32,7 @@
 
 ⊕ **new AopWorker**(): [AopWorker](_aopworker_.aopworker.md)
 
-*Defined in [AopWorker.ts:2](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/AopWorker.ts#L2)*
+*Defined in [AopWorker.ts:2](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/AopWorker.ts#L2)*
 
 It controls the code region defined through the \[Interceptor\], to let you define what to do at the start, at the end, at in case of Exception in that region
 
@@ -64,7 +64,7 @@ ___
 
 **● _extra**: *`any`*
 
-*Defined in [AopWorker.ts:2](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/AopWorker.ts#L2)*
+*Defined in [AopWorker.ts:2](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/AopWorker.ts#L2)*
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 ▸ **end**(methodName: *`string`*, _arguments: *`any`*, ret?: *`any`*): `void`
 
-*Defined in [AopWorker.ts:47](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/AopWorker.ts#L47)*
+*Defined in [AopWorker.ts:47](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/AopWorker.ts#L47)*
 
 It runs at the end the method. Even when an exception is being performed
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **exception**(methodName: *`string`*, _arguments: *`any`*, exception: *`string`*): `void`
 
-*Defined in [AopWorker.ts:39](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/AopWorker.ts#L39)*
+*Defined in [AopWorker.ts:39](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/AopWorker.ts#L39)*
 
 It runs in case of exception.
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **start**(methodName: *`string`*, _arguments: *`any`*): `void`
 
-*Defined in [AopWorker.ts:31](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/AopWorker.ts#L31)*
+*Defined in [AopWorker.ts:31](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/AopWorker.ts#L31)*
 
 It runs at the start of the region
 

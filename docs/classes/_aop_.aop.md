@@ -34,7 +34,7 @@
 
 ⊕ **new Aop**(type: *`object`*, className?: *`undefined` \| `string`*): [Aop](_aop_.aop.md)
 
-*Defined in [Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L5)*
+*Defined in [Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/Aop.ts#L5)*
 
 Class to intercept code regions related to class method, functions or promises.
 
@@ -86,7 +86,7 @@ ___
 
 **● className**: *`undefined` \| `string`*
 
-*Defined in [Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L5)*
+*Defined in [Aop.ts:5](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/Aop.ts#L5)*
 
 ___
 <a id="type"></a>
@@ -95,7 +95,7 @@ ___
 
 **● type**: *`object`*
 
-*Defined in [Aop.ts:4](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L4)*
+*Defined in [Aop.ts:4](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/Aop.ts#L4)*
 
 #### Type declaration
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **_intereceptMethod**(methodName: *`string`*, _arguments: *`any`*, method: *`function`*, extra?: *`any`*): `any`
 
-*Defined in [Aop.ts:85](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L85)*
+*Defined in [Aop.ts:87](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/Aop.ts#L87)*
 
 Intercept a class method who retrieves a value (not void)
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **_intereceptPromise**(methodName: *`string`*, _arguments: *`any`*, promise: *`Promise`<`any`>*, extra?: *`any`*): `Promise`<`any`>
 
-*Defined in [Aop.ts:61](https://github.com/thewazaa/ts.aop_pattern/blob/4a30b91/src/Aop.ts#L61)*
+*Defined in [Aop.ts:61](https://github.com/thewazaa/ts.aop_pattern/blob/6b95fcc/src/Aop.ts#L61)*
 
 Intercept a promise who retrieves a promise
 
