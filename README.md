@@ -3,6 +3,7 @@ Index
 
 ### Version changes
 
+*   1.1.9 promise bug
 *   1.1.6 corrected typescript issues
 *   1.1.2 js builder
 *   1.1.0 Extra parameters for external management
